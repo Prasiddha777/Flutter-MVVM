@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:mvc/login_screen.dart';
+import 'package:mvc/utils/routes/routes.dart';
+import 'package:mvc/utils/routes/routes_name.dart';
 
 void main() {
   runApp(const MyApp());
@@ -16,7 +18,9 @@ class MyApp extends StatelessWidget {
       theme: ThemeData(
         primarySwatch: Colors.blue,
       ),
-      home: const LoginScreenPage(),
+      debugShowCheckedModeBanner: false,
+      initialRoute: RoutesName.login,
+      onGenerateRoute: Routes.generateRoutes,
     );
   }
 }
